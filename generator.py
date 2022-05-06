@@ -5,14 +5,15 @@
 Created on Sun Jun 28 20:30:43 2020 
 Authors Deven Bowman, Julia Codere 
 """ 
-def printf(format, *values):
-    print(format % values )
-   
+
 import numpy as np 
 import matplotlib.pyplot as plt 
 import re
 from matplotlib.pyplot import cm
 import itertools
+
+def printf(format, *values):
+    print(format % values )
 
 STYLES = [
     ('red', '.'),
@@ -29,19 +30,6 @@ STYLES = [
 plt.rcParams["font.weight"] = "bold" #makes the font on the plots bold 
 plt.rcParams["axes.labelweight"] = "bold" #makes the fonts on the plots bold 
 
-## Arrays that will hold info about each data set 
-
-#contains -999 just to initialize the array 
-
-fileNames=[] 
-massNum=[] 
-chrgNum=[] 
-color=[] 
-markerSize=[] 
-markerSymbol=[] 
-fillvalue=[] 
-computeBins=[] 
-
 ## Determines what power E is raised to 
 
 POWER = 2.75 
@@ -50,18 +38,9 @@ plt.figure(figsize=(19, 8), dpi=80)
 
 plt.rcParams["figure.figsize"] = plt.rcParamsDefault["figure.figsize"]
 
-##plotInput(name of the file, atomic mass number, charge number, color for plot, size of the marker, type of marker) 
+## plotInput(name of the file, atomic mass number, charge number, color for plot, size of the marker, type of marker) 
 ## If the file containes energy data, enter None for MassNum and ChrgNum 
-def plotInput(FileName, MassNum, ChrgNum, colr, mrkerSize, mrkerSymbol, fillValue, bins=True):
-    ## adds information to each array 
-    fileNames.append(FileName) 
-    massNum.append(MassNum) 
-    chrgNum.append(ChrgNum) 
-    color.append(colr) 
-    markerSize.append(mrkerSize) 
-    markerSymbol.append(mrkerSymbol) 
-    fillvalue.append(fillValue)
-    computeBins.append(bins)
+# def plotInput(FileName, MassNum, ChrgNum, colr, mrkerSize, mrkerSymbol, fillValue, bins=True):
 
 element_table = {}
 ## data will plot in the order that plotInput is called 
