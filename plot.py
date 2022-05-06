@@ -3,7 +3,7 @@
 
 """ 
 Created on Sun Jun 28 20:30:43 2020 
-Authors Deven Bowman, Julia Codere 
+Authors Deven Bowman, Julia Codere, Lincoln Doney
 """ 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -70,7 +70,7 @@ def plotInput(FileName, MassNum, ChrgNum, colr, mrkerSize, mrkerSymbol, fillValu
 
 ## data will plot in the order that plotInput is called 
 
-element = "S"
+element = "P"
 if(element == "P"):
     plotInput('P_data/P_ACE-CRIS(1997-1998)_2013', None, None,'red', 4,'s', 'full') #point markers  
     plotInput('P_data/P_ALICE(1987)_1992', None, None,'black', 4,'D', 'full') #point markers  
@@ -80,7 +80,7 @@ if(element == "P"):
     plotInput('P_data/P_Balloon(1968)_1979', None, None,'cadetblue', 4,'*', 'full') #point markers  
     plotInput('P_data/P_CRISIS(1977)_1981', None, None,'orange', 4,'^', 'full') #point markers  
     plotInput('P_data/P_HEAO3-C2(1979-1980)_1990', None, None,'green', 4,'P', 'full') #point markers  
-    plotInput('P_data/P_Voyager1-HET-Aend(2012-2015)_2016', None, None,'cadetblue', 4,'*', 'full') #point markers  
+#    plotInput('P_data/P_Voyager1-HET-Aend(2012-2015)_2016', None, None,'cadetblue', 4,'*', 'full') #point markers  
 elif (element == "S"):
     plotInput('S_data/S_ACE-CRIS_2013', None, None,'red', 4,'s', 'full', bins=False) #point markers  
     plotInput('S_data/S_ALICE_1992', None, None,'black', 4,'.', 'full', bins=False) #point markers  
