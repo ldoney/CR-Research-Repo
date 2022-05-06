@@ -1,0 +1,6 @@
+*.png
+*.jpg
+*.csv
+P_data/*.csv
+S_data/*.csv
+e+_data/*.csv
